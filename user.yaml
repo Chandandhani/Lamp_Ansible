@@ -1,0 +1,11 @@
+---
+- name: Creating user
+  hosts: node
+  vars_files:
+    - ./secret.yaml
+  tasks:
+    - name: Creating user
+      user: 
+        name: "{{ username }}"
+        password: "{{ password }}"
+      
